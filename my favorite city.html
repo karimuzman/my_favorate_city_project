@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<style>
+.title {
+font-size: 50px;
+color: blue;
+text-align: center;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.subtitle {
+font-size: 40px;
+color: green;
+text-align: center;
+}
+
+.paragraph {
+background-color: 15px;
+font-size: 15px;
+line-height: 10px;
+padding: 25px;
+margin: 25px;
+}
+
+{
+padding: 0;
+margin: 0;
+box-siying: border-box;
+
+}
+{
+background-color: #262626;
+
+}
+li{
+    list-style: none;
+}
+
+a{
+    color: whilte;
+    text-decoration: none;
+}
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-branding{
+    font-size: 2rem;
+}
+
+.nav-link{
+    transition: 0.7s ease;
+}
+
+.nav-link:hover{
+    color: dodgerblue;
+}
+
+.Munich{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: black;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color; white;
+}
+
+@media(max-width:786px){
+    .Munich{
+        display: block;
+    }
+
+.Munich.active .bar:nth-child(2){
+    opacity: 0;
+}
+.Munich.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.Munich.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+.nav-menu{
+    position:fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+.nav-item{
+    margin: 16px 0;
+}
+.nav-menu.active{
+    left: 0;
+}
+
+}
+
+</style>
+
+<body>
+<header>
+<nav class="navbar">
+    <a href="#" class="nav-branding">DEV.</a>
+<ul class="nav-menu">
+    <li class="nave-item">
+        <a href="#" class="nav-link">Home</a>
+    <li class="nave-item">
+        <a href="#" class="nav-link">City Profile</a>
+    <li class="nave-item">
+        <a href="#" class="nav-link">Gallery</a>
+    </li>
+</ul>
+<div class="Munich">
+    <span class="city"></span>
+    <span class="city"></span>
+    <span class="city"></span>
+</nav>
+<h1 class="title">My favorite City</h1>
+<h2 class="subtitle">Munich</h2>
+<p class="paragraph">Munich is situated in the south of Germany. it is a colorful and alive city. There are many art galleries and museums in it.</p>
+
+<img src="https://images.unsplash.com/photo-1595867818082-083862f3d630?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bXVuaWNofGVufDB8fDB8fA%3D%3D&w=1000&q=80">
+<img src="https://i.natgeofe.com/n/62574e1e-cebf-48fc-862a-20f2ade80a37/church-munich-germany_3x4.jpg">
+</body>
+</html>
